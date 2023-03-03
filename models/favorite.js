@@ -14,8 +14,20 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Favorite.init({
-    user: DataTypes.INTEGER,
-    meal: DataTypes.INTEGER
+    user: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    },
+    meal: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'meals',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'Favorite',
