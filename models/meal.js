@@ -11,17 +11,57 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Meal.belongsTo(models.User, {
+        foreignKey: 'user_id',
+        as: 'user',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      })
+      Meal.hasMany(models.Comment, {
+        foreignKey: 'meal_id',
+        as: 'comments',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      })
     }
   }
   Meal.init({
-    createdby: DataTypes.INTEGER,
-    name: DataTypes.STRING,
-    picture: DataTypes.STRING,
-    cook_time: DataTypes.STRING,
-    cuisine: DataTypes.STRING,
-    diet_type: DataTypes.STRING,
-    ingredients: DataTypes.STRING,
-    meal_type: DataTypes.STRING
+    createdby: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    picture: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    cook_time: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    cuisine: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    diet_type: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    ingredients: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    meal_type: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   }, {
     sequelize,
     modelName: 'Meal',
