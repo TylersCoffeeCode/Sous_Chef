@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user: {
+      userId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         onDelete: 'CASCADE',
@@ -18,7 +18,7 @@ module.exports = {
           key: 'id'
         }
       },
-      meal: {
+      mealId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         onDelete: 'CASCADE',
