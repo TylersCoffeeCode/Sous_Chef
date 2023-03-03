@@ -11,19 +11,21 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.hasMany(models.Meals, {
+      User.belongsToMany(models.Meal, {
         foreignKey: 'meal_id',
+        through: 'favorites',
         as: 'creator',
         onDelete: 'cascade',
         onUpdate: 'cascade'
       })
-      User.hasMany(models.Favorite, {
-        foreignKey: 'meal_id',
-        as: 'favorites',
+      User.belongsToMany(models.Meal, {
+        foreignKey: 'user_id',
+        through: 'favorites',
+        as: 'favorites_list',
         onDelete: 'cascade',
         onUpdate: 'cascade'
       })
-      User.hasMany(models.Comment, {
+      User.hasMany(models.Comment, { 
         foreignKey: 'user_id',
         onDelete: 'cascade',
         onUpdate: 'cascade'
