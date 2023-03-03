@@ -8,12 +8,11 @@ const Register = async (req, res) => {
   try {
     const { email, password, username } = req.body
     let passwordDigest = await middleware.hashPassword(password)
-    console.log(passwordDigest)
     const user = await User.create({ email, password:passwordDigest, username })
     res.send(user)
   } catch (error) {
     throw error
-  }
+  } 
 }
 
 module.exports = {

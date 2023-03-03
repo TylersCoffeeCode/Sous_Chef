@@ -24,7 +24,7 @@ const createToken = (payload) => {
 
 const verifyToken = (req, res, next) => {
   const { token } = res.locals
-  // Gets the token stored in the request lifecycle state   
+  // Gets the token stored in the request lifecycle state 
   try {
     let payload = jwt.verify(token, APP_SECRET)
     // Verifies the token is legit
