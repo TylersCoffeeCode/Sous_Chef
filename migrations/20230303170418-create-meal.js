@@ -12,7 +12,6 @@ module.exports = {
       createdby: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        field: 'user_id',
         onDelete: 'CASCADE',
         references: {
           model: 'users',
@@ -29,27 +28,27 @@ module.exports = {
       },
       picture: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       cook_time: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       cuisine: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       diet_type: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       ingredients: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       meal_type: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       createdAt: {
         allowNull: false,

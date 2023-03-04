@@ -2,7 +2,8 @@ const express = require('express')
 const cors = require('cors')
 const logger = require('morgan')
 const UserRouter= require('./routes/UserRouter')
-
+const CommentRouter = require('./routes/CommentRouter')
+const MealRouter = require('./routes/MealRouter')
 const app = express()
 
 
@@ -18,7 +19,8 @@ app.get('/', (req, res) => res.json({ message: 'Server Works' }))
 
 
 app.use('/users', UserRouter)
-
+app.use('/comments', CommentRouter)
+app.use('/meals', MealRouter)
 
 
 

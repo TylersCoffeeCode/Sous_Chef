@@ -33,7 +33,6 @@ module.exports = (sequelize, DataTypes) => {
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: 'meal_id',
       onDelete: 'CASCADE',
       references: {
         model: 'meals',
@@ -43,7 +42,6 @@ module.exports = (sequelize, DataTypes) => {
     meal_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: 'meal_id',
       onDelete: 'CASCADE',
       references: {
         model: 'meals',
