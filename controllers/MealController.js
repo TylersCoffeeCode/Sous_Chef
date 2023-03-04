@@ -12,6 +12,16 @@ const CreateMeal = async (req,res) => {
 }
 
 
+const GetMeal = async (req, res) => {
+  try {
+    const meals = await Meal.findAll()
+    res.send(meals)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
-  CreateMeal
+  CreateMeal,
+  GetMeal
 }
