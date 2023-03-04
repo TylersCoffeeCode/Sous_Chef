@@ -48,27 +48,27 @@ module.exports = (sequelize, DataTypes) => {
     },
     picture: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     cook_time: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     cuisine: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     diet_type: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     ingredients: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     meal_type: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
   }, {
     sequelize,

@@ -13,19 +13,22 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      user: {
+      user_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        field: 'user_id',
         onDelete: 'CASCADE',
         references: {
           model: 'users',
           key: 'id'
         }
       },
-      meal: {
+      meal_id: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: 'meals',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
