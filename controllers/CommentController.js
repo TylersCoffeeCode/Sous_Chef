@@ -30,9 +30,19 @@ const DeleteComment = async (req, res) => {
   }
 }
 
+const GetComments = async (req, res) => {
+  try {
+    const comments = await Comment.findAll()
+    res.send(comments)
+  } catch (error) {
+    throw error
+  }
+}
+
 
 module.exports = {
   CreateComment,
   UpdateComment,
-  DeleteComment
+  DeleteComment,
+  GetComments
 }
