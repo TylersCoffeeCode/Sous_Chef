@@ -1,6 +1,6 @@
 const {Meal} = require('../models')
 const middleWare = require('../middleware')
-
+const {Op} = require(`sequelize`)
 
 const CreateMeal = async (req,res) => {
   try{
@@ -14,8 +14,8 @@ const CreateMeal = async (req,res) => {
 const getMealByName = async (req, res) => {
   try {
     const mealName = req.params.name
-    const meal = await Meal.find({
-      name: { $regex: `${mealName}`, $options: 'i' }
+    const meal = await Meal.findAll({
+      where: {name: {[Op.iLike]: `%${mealName}%`}}
     })
     if (meal) {
       return res.status(200).json({ meal })
@@ -36,7 +36,21 @@ const GetMeal = async (req, res) => {
   }
 }
 
+const getMealById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const meal = await Meal.findByPk(id)
+    if (meal) {
+      return res.status(200).json({ meal })
+    }
+    return res.status(404).send('Meals with the specified ID does not exists')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
+  getMealById,
   getMealByName,
   CreateMeal,
   GetMeal
