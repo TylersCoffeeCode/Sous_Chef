@@ -7,6 +7,7 @@ const middlewareWrapper = require('cors')
 const Register = async (req, res) => {
   try {
     const { email, password, username } = req.body
+    console.log(email)
     let passwordDigest = await middleware.hashPassword(password)
     const user = await User.create({ email, password:passwordDigest, username })
     res.send(user)
