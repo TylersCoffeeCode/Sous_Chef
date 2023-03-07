@@ -39,10 +39,20 @@ const GetComments = async (req, res) => {
   }
 }
 
+const GetCommentByMealId = async (req, res) => {
+  try {
+    const comments = await Comment.findAll()
+    res.send(comments)
+  } catch (error) {
+    throw error
+  }
+}
+
 
 module.exports = {
   CreateComment,
   UpdateComment,
   DeleteComment,
-  GetComments
+  GetComments,
+  // GetCommentByMealId
 }
