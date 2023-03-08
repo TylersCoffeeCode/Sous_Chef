@@ -26,6 +26,22 @@ const getMealByName = async (req, res) => {
   }
 }
 
+const getMealByCuisine = async (req, res) => {
+  try {
+    const cuisine = req.params.cuisine
+    const meal = await Meal.findAll({
+      where: {cuisine: cuisine}
+    })
+    if (meal) {
+      return res.status(200).json({ meal })
+    }
+    return res.status(404).send('Meals with the specified Cuisine does not exists')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+
 
 const GetMeal = async (req, res) => {
   try {
@@ -52,6 +68,7 @@ const getMealById = async (req, res) => {
 module.exports = {
   getMealById,
   getMealByName,
+  getMealByCuisine,
   CreateMeal,
   GetMeal
 }
