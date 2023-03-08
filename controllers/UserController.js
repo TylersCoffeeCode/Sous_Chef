@@ -66,15 +66,35 @@ const UpdatePassword = async (req, res) => {
   }
 }
 
+const getUser = async (req , res) => {
+  try {
+    console.log(req.params.userid)
+  const user = await User.findByPk(req.params.userid)
+  return res.send(user)
+  }catch (error) {
+    console.log(error)
+    res.status(401).send({ status: 'Error', msg: 'An error has occurred updating password!' })
+  }
+}
+
+
+
 const CheckSession = async (req, res) => {
   const { payload } = res.locals
   res.send(payload)
 }
+
+const addFavorite = async (req,res) => {
+  const favorite = {meal_id} = req.body
+  const meal = await Meal.findByPk(meal_id)
+}
+
 
 
 module.exports = {
   Register,
   Login,
   UpdatePassword,
-  CheckSession
+  CheckSession,
+  getUser,
 }
