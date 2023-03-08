@@ -17,6 +17,6 @@ router.put(
     middleware.verifyToken,
     controller.CheckSession
   )
-  
+router.get('/get/:userid',controller.getUser)
 
 module.exports = router
