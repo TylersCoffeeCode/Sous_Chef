@@ -36,7 +36,7 @@ module.exports = {
         picture: 'https://www.momontimeout.com/wp-content/uploads/2018/10/homemade-mac-and-cheese-recipe-titled.jpg',
         cook_time: 1,
         cuisine: 'American',
-        diet_type: 'Traditinal',
+        diet_type: 'Traditional',
         ingredients: 'Elbow Macaroni, Olive Oil, Butter, Flour, Whole Milk, Heavy Whipping Cream, Gruyere Cheese, Panko Crumbs, Parmesan, Smoked Paprika',
         meal_type: 'Dinner'
       },
@@ -47,7 +47,7 @@ module.exports = {
         picture: 'https://images-gmi-pmc.edge-generalmills.com/3973d54d-0004-4c06-a9d1-0843f3bf3efa.jpg',
         cook_time: 0.5,
         cuisine: 'American',
-        diet_type: 'Traditinal',
+        diet_type: 'Traditional',
         ingredients: 'All-Purpose Flour, Egg, Water, Pank Bread Crumbs, Grated Parmesan Cheese, Chicken Tenderloins',
         meal_type: 'Dinner'
       },
@@ -58,7 +58,7 @@ module.exports = {
         picture: 'https://natashaskitchen.com/wp-content/uploads/2021/03/French-Toast-8.jpg',
         cook_time: 0.25,
         cuisine: 'American',
-        diet_type: 'Traditinal',
+        diet_type: 'Traditional',
         ingredients: 'Sliced Bread, Eggs, Milk, Vanilla Extract, Salt, Butter',
         meal_type: 'Breakfast'
       },
