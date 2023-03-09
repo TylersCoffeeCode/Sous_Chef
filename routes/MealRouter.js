@@ -8,7 +8,7 @@ router.post('/create',
   controller.CreateMeal)
 router.get('/', controller.GetMeal)
 router.get('/search/:name', controller.getMealByName)
-router.get('/:cuisine', controller.getMealByCuisine)
+router.get('/type/:cuisine', controller.getMealByCuisine)
 router.get('/:id', controller.getMealById)
 
 router.delete('/:id',
