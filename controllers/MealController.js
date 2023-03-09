@@ -65,10 +65,33 @@ const getMealById = async (req, res) => {
   }
 }
 
+const DeleteMeal = async (req, res) => {
+  try {
+    await Meal.destroy({ where: { id: req.params.id } })
+    res.send({ msg: 'Meal Removed', payload: req.params.id, status: 'Ok' })
+  } catch (error) {
+    throw error
+  }
+}
+
+const EditMeal = async (req, res) => {
+  try {
+    const meal = await Meal.update(
+      { ...req.body },
+      { where: { id: req.params.id }, returning: true }
+    )
+    res.send(meal)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   getMealById,
   getMealByName,
   getMealByCuisine,
   CreateMeal,
-  GetMeal
+  GetMeal,
+  DeleteMeal,
+  EditMeal
 }

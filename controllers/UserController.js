@@ -1,4 +1,4 @@
-const {User} = require('../models')
+const {User, Meal} = require('../models')
 const middleware = require('../middleware')
 const middlewareWrapper = require('cors')
 
@@ -89,6 +89,14 @@ const addFavorite = async (req,res) => {
   const meal = await Meal.findByPk(meal_id)
 }
 
+const getUserMeals = async (req,res) => {
+  const id = req.params.userid
+  const meals = await Meal.findAll({
+    where: { createdby: id },
+    raw: true
+  })
+  res.send(meals)
+}
 
 
 module.exports = {
@@ -97,4 +105,5 @@ module.exports = {
   UpdatePassword,
   CheckSession,
   getUser,
+  getUserMeals
 }

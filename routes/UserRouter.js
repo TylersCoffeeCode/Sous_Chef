@@ -18,5 +18,6 @@ router.put(
     controller.CheckSession
   )
 router.get('/get/:userid',controller.getUser)
+router.get('/get/meals/:userid',controller.getUserMeals)
 
 module.exports = router
