@@ -1,6 +1,6 @@
 # Sous_Chef
 ![Nav](https://user-images.githubusercontent.com/122232068/224384486-c0b7b1c4-1f5c-499e-ba49-580dc50f808f.png)
-### March 2023
+### Created March 2023
 #### by Tyler Coats, Anthony Harpestad, and Adam Montemurro
 ***
 
