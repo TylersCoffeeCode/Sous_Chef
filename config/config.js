@@ -3,8 +3,6 @@ module.exports = {
   development: {
     database: 'Sous_Chef',
     dialect: 'postgres',
-    // username: "postgres",
-    // password: "1234"
   },
   test: {
     database: 'Sous_Chef',
