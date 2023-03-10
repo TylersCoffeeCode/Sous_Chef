@@ -4,13 +4,7 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Meal extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
-      // define association here
       Meal.belongsToMany(models.User, {
         foreignKey: 'user_id',
         through: 'favorites',
@@ -43,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT('long'),
       allowNull: false
     },
     picture: {
@@ -51,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true
     },
     cook_time: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT,
       allowNull: true
     },
     cuisine: {
@@ -63,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true
     },
     ingredients: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT('long'),
       allowNull: true
     },
     meal_type: {

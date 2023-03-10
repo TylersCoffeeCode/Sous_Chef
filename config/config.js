@@ -2,7 +2,7 @@ require('dotenv').config()
 module.exports = {
   development: {
     database: 'Sous_Chef',
-    dialect: 'postgres'
+    dialect: 'postgres',
   },
   test: {
     database: 'Sous_Chef',

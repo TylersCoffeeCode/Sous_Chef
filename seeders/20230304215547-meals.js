@@ -1,12 +1,9 @@
 'use strict';
-const { User, Meal, sequelize } = require('../models')
-const falso = require('@ngneat/falso')
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  async up(queryInterface) {
     let meals = [
-
       {
         createdby: 2000,
         name: 'Banana Pancakes',
@@ -73,7 +70,6 @@ module.exports = {
         ingredients: 'Spaghetti, ground beef, onion, garlic, canned tomatoes, tomato paste, beef broth, red wine, herbs, parmesan cheese',
         meal_type: 'Dinner'
       },
-
       {
         createdby: 2000,
         name: 'Beef Stir Fry',
@@ -85,7 +81,6 @@ module.exports = {
         ingredients: 'Beef, broccoli, bell pepper, onion, garlic, soy sauce, cornstarch, vegetable oil, sesame oil',
         meal_type: 'Dinner'
       },
-
       {
         createdby: 3000,
         name: 'Salmon with Roasted Vegetables',
@@ -108,7 +103,6 @@ module.exports = {
         ingredients: 'English muffins, Canadian bacon, eggs, butter, lemon juice, cayenne pepper',
         meal_type: 'Breakfast'
       },
-
       {
         createdby: 3000,
         name: 'Avocado Toast',
@@ -131,7 +125,6 @@ module.exports = {
         ingredients: 'Bread, Cheddar Cheese, Butter',
         meal_type: 'Lunch'
       },
-
       {
         createdby: 1000,
         name: 'Caesar Salad',
@@ -143,7 +136,6 @@ module.exports = {
         ingredients: 'Romaine Lettuce, Garlic Croutons, Parmesan Cheese, Olive Oil, Lemon Juice, Anchovy Paste, Dijon Mustard, Worcestershire Sauce, Salt, Pepper',
         meal_type: 'Lunch'
       },
-
       {
         createdby: 3000,
         name: 'Tuna Salad Sandwich',
@@ -155,7 +147,6 @@ module.exports = {
         ingredients: 'Canned Tuna, Mayonnaise, Celery, Onion, Bread',
         meal_type: 'Lunch'
       },
-
       {
         createdby: 2000,
         name: 'Chicken Caesar Wrap',
@@ -178,7 +169,6 @@ module.exports = {
         ingredients: 'Cucumbers, Tomatoes, Red Onion, Feta Cheese, Olives, Olive Oil, Red Wine Vinegar, Dried Oregano, Salt, Pepper',
         meal_type: 'Lunch'
       }
-
     ]
     await queryInterface.bulkInsert('meals', meals)
   },

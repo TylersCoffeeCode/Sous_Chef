@@ -1,14 +1,10 @@
 'use strict';
-const { hashPassword } = require('../middleware')
 const falso = require('@ngneat/falso')
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-
-
-
-      const defaultUsers= [{
+    const defaultUsers = [{
       id: 1000,
       username: 'Adam2',
       email: 'Adam@email2.com',

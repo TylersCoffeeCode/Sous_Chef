@@ -1,5 +1,4 @@
 const {Meal} = require('../models')
-const middleWare = require('../middleware')
 const {Op} = require(`sequelize`)
 
 const CreateMeal = async (req,res) => {
@@ -40,8 +39,6 @@ const getMealByCuisine = async (req, res) => {
     return res.status(500).send(error.message)
   }
 }
-
-
 
 const GetMeal = async (req, res) => {
   try {
