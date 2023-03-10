@@ -7,10 +7,11 @@ module.exports = {
   async up(queryInterface, Sequelize) {
 
 
-    let defaultUsers= [{
+
+      const defaultUsers= [{
       id: 1000,
-      username: 'Adam',
-      email: 'Adam@email.com',
+      username: 'Adam2',
+      email: 'Adam@email2.com',
       password: falso.randPassword(),
       createdAt: new Date(),
       updatedAt: new Date()
@@ -33,7 +34,7 @@ module.exports = {
     }
 
     ]
-    let users = [...Array(10)].map((_) => ({
+    const users = [...Array(10)].map((_) => ({
       username: falso.randUserName(),
       email: falso.randEmail(),
       password: falso.randPassword(),

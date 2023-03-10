@@ -43,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT('long'),
       allowNull: false
     },
     picture: {
@@ -51,7 +51,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true
     },
     cook_time: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT,
       allowNull: true
     },
     cuisine: {
@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true
     },
     ingredients: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT('long'),
       allowNull: true
     },
     meal_type: {
