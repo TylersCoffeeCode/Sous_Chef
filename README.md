@@ -20,18 +20,18 @@ But that's not all - with Sous-Chef, users can also sign up and contribute their
 * Node
 
 ### ***Screenshots***
-![Login](https://user-images.githubusercontent.com/122232068/224384790-925276bb-4e6e-4ab5-8c53-08e6be72aa9a.png)
+![Login](https://user-images.githubusercontent.com/122232068/224384790-925276bb-4e6e-4ab5-8c53-08e6be72aa9a.png)<br>
 ![Create Meal](https://user-images.githubusercontent.com/122232068/224384958-524a8c4f-881b-4ce4-bcab-6e46ce178ec8.png)
 
 ***
 
 
 ### Resources 
-[Trello](https://trello.com/b/SSZevE57/sous-chef)
-[ERD](https://lucid.app/lucidchart/003766fe-c422-41df-b340-4391df477210/edit?view_items=9B6Bs2IgEKgZ&invitationId=inv_c6e3a498-7ed9-4900-bf65-cc4294999ee7)
-[FIGMA](https://www.figma.com/file/0TE3G5Xo7UdTLujGLPzGOh/Sous-Chef?node-id=0%3A1&t=vLkC3L6n4uhTShDu-1)
+[Trello](https://trello.com/b/SSZevE57/sous-chef)<br>
+[ERD](https://lucid.app/lucidchart/003766fe-c422-41df-b340-4391df477210/edit?view_items=9B6Bs2IgEKgZ&invitationId=inv_c6e3a498-7ed9-4900-bf65-cc4294999ee7)<br>
+[FIGMA](https://www.figma.com/file/0TE3G5Xo7UdTLujGLPzGOh/Sous-Chef?node-id=0%3A1&t=vLkC3L6n4uhTShDu-1)<br>
 
 ### Credits
-[Tyler Coats](https://github.com/TylersCoffeeCode)
-[Anthony Harpestad](https://github.com/Anthony5321)
-[Adam Montemurro](https://github.com/AdamMontemurro)
+[Tyler Coats](https://github.com/TylersCoffeeCode)<br>
+[Anthony Harpestad](https://github.com/Anthony5321)<br>
+[Adam Montemurro](https://github.com/AdamMontemurro)<br>
