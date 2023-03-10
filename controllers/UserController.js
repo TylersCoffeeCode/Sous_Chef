@@ -1,8 +1,5 @@
 const {User, Meal} = require('../models')
 const middleware = require('../middleware')
-const middlewareWrapper = require('cors')
-
-
 
 const Register = async (req, res) => {
   try {
@@ -76,8 +73,6 @@ const getUser = async (req , res) => {
     res.status(401).send({ status: 'Error', msg: 'An error has occurred updating password!' })
   }
 }
-
-
 
 const CheckSession = async (req, res) => {
   const { payload } = res.locals

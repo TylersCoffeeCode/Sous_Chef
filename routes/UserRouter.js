@@ -6,18 +6,18 @@ const middleware = require('../middleware')
 router.post('/login', controller.Login)
 router.post('/register', controller.Register)
 router.put(
-    '/update/:user_id',
-    middleware.stripToken,
-    middleware.verifyToken,
-    controller.UpdatePassword
-  )
-  router.get(
-    '/session',
-    middleware.stripToken,
-    middleware.verifyToken,
-    controller.CheckSession
-  )
-router.get('/get/:userid',controller.getUser)
-router.get('/get/meals/:userid',controller.getUserMeals)
+  '/update/:user_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.UpdatePassword
+)
+router.get(
+  '/session',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.CheckSession
+)
+router.get('/get/:userid', controller.getUser)
+router.get('/get/meals/:userid', controller.getUserMeals)
 
 module.exports = router

@@ -4,9 +4,7 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-
     static associate(models) {
-
       User.belongsToMany(models.Meal, {
         foreignKey: 'meal_id',
         through: 'favorites',
@@ -21,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'cascade',
         onUpdate: 'cascade'
       })
-      User.hasMany(models.Comment, { 
+      User.hasMany(models.Comment, {
         foreignKey: 'user_id',
         onDelete: 'cascade',
         onUpdate: 'cascade'
@@ -49,10 +47,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ARRAY(DataTypes.INTEGER)
     }
   },
-   {
-    sequelize,
-    modelName: 'User',
-    tableName: 'users'
-  });
+    {
+      sequelize,
+      modelName: 'User',
+      tableName: 'users'
+    });
   return User;
 };

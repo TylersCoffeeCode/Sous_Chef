@@ -12,13 +12,13 @@ router.get('/type/:cuisine', controller.getMealByCuisine)
 router.get('/:id', controller.getMealById)
 
 router.delete('/:id',
-middleware.stripToken,
-middleware.verifyToken,
-controller.DeleteMeal)
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.DeleteMeal)
 
 router.put('/:id',
-middleware.stripToken,
-middleware.verifyToken,
-controller.EditMeal)
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.EditMeal)
 
 module.exports = router
