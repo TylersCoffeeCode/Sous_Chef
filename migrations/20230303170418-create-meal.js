@@ -23,7 +23,7 @@ module.exports = {
         allowNull: false
       },
       description: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT('long'),
         allowNull: false
       },
       picture: {
@@ -31,7 +31,7 @@ module.exports = {
         allowNull: true
       },
       cook_time: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.FLOAT,
         allowNull: true
       },
       cuisine: {
@@ -43,7 +43,7 @@ module.exports = {
         allowNull: true
       },
       ingredients: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT('long'),
         allowNull: true
       },
       meal_type: {
