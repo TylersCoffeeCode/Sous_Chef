@@ -5,7 +5,11 @@
 ***
 
 ### ***Description***
+Looking for an app that can help you discover new recipes from around the world? Look no further than Sous-Chef, the premier recipe database app that brings together a vast array of culinary delights from cultures across the globe.
 
+Sous-Chef is the perfect tool for foodies and home cooks alike, with an extensive database of recipes that covers everything from classic American cuisine to spicy Thai curries and savory Mexican dishes. Whether you're looking for a quick and easy weeknight meal or an impressive dinner party dish, you're sure to find something to suit your tastes in Sous-Chef's ever-expanding recipe collection.
+
+But that's not all - with Sous-Chef, users can also sign up and contribute their own recipes to the app's database. So if you've got a secret family recipe or a new twist on an old favorite, you can easily share it with the Sous-Chef community and help to expand the app's already impressive collection!
 
 ## [Deployed](https://sous-chef-app.herokuapp.com/)
 
