@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "Sous_Chef",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "Sous_Chef",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "Sous_Chef",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
